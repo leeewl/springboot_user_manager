@@ -21,4 +21,10 @@ public class UserService implements IUserService {
         return userRepository.save(userPojo);
     }
 
+    @Override
+    public User getUser(Integer userId) {
+        return userRepository.findById(userId).orElseThrow(() -> {
+            throw new IllegalArgumentException("用户不存在, 参数异常！");
+        });
+    }
 }

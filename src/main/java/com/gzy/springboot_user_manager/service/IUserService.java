@@ -10,4 +10,11 @@ public interface IUserService {
      * @return 添加成功的用户信息
      */
     User add(UserDto user);
+
+    /**
+     * 查询用户
+     * @param userId 用户id
+     * @return
+     */
+    User getUser(Integer userId);
 }
