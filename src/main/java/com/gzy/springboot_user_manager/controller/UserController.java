@@ -33,7 +33,12 @@ public class UserController {
         return ResponseMessage.success(userNew);
     }
 
-    // 修改 @PutMapping
+    // 修改
+    @PutMapping
+    public ResponseMessage<User> edit(@Validated @RequestBody UserDto user){
+        User userNew = userService.edit(user);
+        return ResponseMessage.success(userNew);
+    }
 
     // 删除 @DeleteMapping
 

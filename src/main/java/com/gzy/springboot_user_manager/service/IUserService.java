@@ -17,4 +17,11 @@ public interface IUserService {
      * @return
      */
     User getUser(Integer userId);
+
+    /**
+     * 修改用户
+     * @param user 修改用户对象
+     * @return
+     */
+    User edit(UserDto user);
 }

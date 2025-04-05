@@ -27,4 +27,11 @@ public class UserService implements IUserService {
             throw new IllegalArgumentException("用户不存在, 参数异常！");
         });
     }
+
+    @Override
+    public User edit(UserDto user) {
+        User userPojo = new User();
+        BeanUtils.copyProperties(user, userPojo);
+        return userRepository.save(userPojo);
+    }
 }
