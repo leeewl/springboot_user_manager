@@ -40,7 +40,10 @@ public class UserController {
         return ResponseMessage.success(userNew);
     }
 
-    // 删除 @DeleteMapping
-
-
+    // 删除
+    @DeleteMapping("/{userId}")
+    public ResponseMessage<String> delete(@PathVariable Integer userId) {
+        userService.delete(userId);
+        return ResponseMessage.success();
+    }
 }

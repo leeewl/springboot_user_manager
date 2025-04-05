@@ -24,4 +24,10 @@ public interface IUserService {
      * @return
      */
     User edit(UserDto user);
+
+    /**
+     * 删除用户
+     * @param userId
+     */
+    void delete(Integer userId);
 }

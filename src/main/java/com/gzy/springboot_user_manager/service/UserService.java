@@ -34,4 +34,9 @@ public class UserService implements IUserService {
         BeanUtils.copyProperties(user, userPojo);
         return userRepository.save(userPojo);
     }
+
+    @Override
+    public void delete(Integer userId) {
+        userRepository.deleteById(userId);
+    }
 }
